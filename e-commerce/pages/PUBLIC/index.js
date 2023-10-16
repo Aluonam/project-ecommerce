@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Filter from './Components/Filter'
 import Products from './Components/Products'
+import estyleCSS from '@/pages/PUBLIC/stylePublic.module.css'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       </Head>
       <main>
 
-       <h1>web e-commerce</h1>
+       <h1 className={estyleCSS.title}>title web e-commerce</h1>
        <Filter></Filter>
        <Products></Products>
 

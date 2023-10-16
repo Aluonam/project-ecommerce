@@ -1,8 +1,9 @@
 import React from 'react'
+import styleCSS from '../Components/Filter.module.css'
 
 const Filter = () => {
   return (
-    <div>Filter</div>
+    <div className={styleCSS.filter}>Filter</div>
   )
 }
 
