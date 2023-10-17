@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className={estyleCSS.title}>
+        <div className={estyleCSS.Globaltitle}>
             <h1>title web e-commerce</h1>
         </div>
        <Filter></Filter>
