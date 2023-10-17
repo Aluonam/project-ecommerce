@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Filter from './Components/Filter'
-import Products from './Components/Products'
+import Filter from './Components/Filter/Filter'
+import Products from './Components/Products/Products'
 import estyleCSS from '@/pages/PUBLIC/stylePublic.module.css'
 
 export default function Home() {

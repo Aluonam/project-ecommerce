@@ -1,0 +1,15 @@
+
+.filter{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(158, 231, 232);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    min-width: 603px;
+}
+
+
