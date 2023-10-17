@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.products_card__img{
+.products_card__imgBox{
     width: 100%;
     height: 75%;
     background-color: rgb(27, 165, 165);
@@ -43,4 +43,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.products_card__productImg{
+    width: 100%;
+    height: 100%;
 }
