@@ -1,13 +1,4 @@
 
-.products{
-    width: 100vw;
-    height: 80vh;
-    background-color: rgb(165, 202, 225);
-    min-width: 603px;
-    min-height: 900px;
-    padding: 4%;
-}
-
 .products_card{
     background-color: rgb(158, 122, 192);
     width: 200px;
@@ -16,6 +7,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* margin-bottom: 1%; */
+    min-width: 200px;
 }
 
 .products_card__title{
