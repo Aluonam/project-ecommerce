@@ -1,23 +1,33 @@
 
 .products_card{
-    background-color: rgb(158, 122, 192);
+    background: #fff;
     width: 200px;
     height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 1%; */
+    border-radius: 6px;
     min-width: 200px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+
+/* ----------estilos al clicar sobre la tarjeta del producto (en .product_card incluimos transition y box-shadow inicial) */
+.products_card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
 }
 
 .products_card__title{
     width: 100%;
     height: 15%;
-    background-color: rgb(165, 216, 137);
+    /* background-color: rgb(165, 216, 137); */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 400px;
 }
 
 .products_card__imgBox{
@@ -32,7 +42,7 @@
 .products_card__price{
     width: 100%;
     height: 10%;
-    background-color: rgb(137, 157, 216);
+    /* background-color: rgb(137, 157, 216); */
     display: flex;
     justify-content: center;
     align-items: center;
