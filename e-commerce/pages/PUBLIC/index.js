@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Filter from './Components/Filter/Filter'
 import Products from './Components/Products/Products'
-import estyleCSS from '@/pages/PUBLIC/stylePublic.module.css'
+import styleCSS from '@/pages/PUBLIC/stylePublic.module.css'
 
 export default function Home() {
   return (
@@ -13,11 +13,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className={estyleCSS.Globaltitle}>
+        <div className={styleCSS.Globaltitle}>
             <h1>title web e-commerce</h1>
         </div>
        <Filter></Filter>
-       <Products></Products>
+
+       <div className={styleCSS.products}>
+          <Products></Products>
+          <Products></Products>
+          <Products></Products>
+          <Products></Products>
+          <Products></Products>
+          <Products></Products>
+          
+        </div>
+        
+       
 
       </main>
     </>
