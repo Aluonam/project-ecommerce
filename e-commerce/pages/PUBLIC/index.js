@@ -21,7 +21,11 @@ export default function Home() {
   const actualProduct = data.map((actualElement)=>{
     return(
       <>
-      <Products productTitle={actualElement.title}></Products>
+      <Products 
+          productTitle={actualElement.title}
+          productImage={actualElement.image}
+          productPrice={actualElement.price}
+        ></Products>
       </>
     )
   })
