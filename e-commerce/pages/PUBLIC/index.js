@@ -12,16 +12,16 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const apiUrl = 'https://fakestoreapi.com/products?limit=20'; 
+    const apiUrl = 'https://fakestoreapi.com/products?limit=·'; 
     axios.get(apiUrl)
       .then(response => setData(response.data))
       .catch(error => console.log('Error detected:', error));
   }, []);
 
-  const products = data.map((actualElement)=>{
+  const actualProduct = data.map((actualElement)=>{
     return(
       <>
-      {actualElement.image}
+      <Products productTitle={actualElement.title}></Products>
       </>
     )
   })
@@ -41,13 +41,8 @@ export default function Home() {
        <Filter></Filter>
 
        <div className={styleCSS.products}>
-        {products}
-          <Products></Products>
-          <Products></Products>
-          <Products></Products>
-          <Products></Products>
-          <Products></Products>
-          <Products></Products>
+          
+          {actualProduct}
           
         </div>
         
