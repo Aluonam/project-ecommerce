@@ -2,8 +2,30 @@ import Head from 'next/head'
 import Filter from './Components/Filter/Filter'
 import Products from './Components/Products/Products'
 import styleCSS from '@/pages/PUBLIC/stylePublic.module.css'
+import axios from 'axios';
+import React, {useState, useEffect} from 'react';
 
 export default function Home() {
+
+  //-------------------consumo API
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const apiUrl = 'https://fakestoreapi.com/products?limit=20'; 
+    axios.get(apiUrl)
+      .then(response => setData(response.data))
+      .catch(error => console.log('Error detected:', error));
+  }, []);
+
+  const products = data.map((actualElement)=>{
+    return(
+      <>
+      {actualElement.image}
+      </>
+    )
+  })
+
   return (
     <>
       <Head>
@@ -19,6 +41,7 @@ export default function Home() {
        <Filter></Filter>
 
        <div className={styleCSS.products}>
+        {products}
           <Products></Products>
           <Products></Products>
           <Products></Products>
