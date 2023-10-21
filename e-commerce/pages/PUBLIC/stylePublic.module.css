@@ -1,18 +1,8 @@
-.Globaltitle{
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: aquamarine;
-    min-width: 603px;
-}
-
 .products{
     max-width: 100vw;
     min-height: 80vh;
     /* background-color: rgb(113, 198, 220); */
-    min-width: 603px;
+    /* min-width: 603px; */
     min-height: 900px;
     padding: 4%;
     display: flex;

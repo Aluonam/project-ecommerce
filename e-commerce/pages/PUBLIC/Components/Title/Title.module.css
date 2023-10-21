@@ -1,0 +1,9 @@
+.Globaltitle{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    /* min-width: 603px; */
+}

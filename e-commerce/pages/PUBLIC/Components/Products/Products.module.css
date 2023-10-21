@@ -51,5 +51,5 @@
 .products_card__productImg{
     width: 100%;
     max-height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Evitar distorsión de img */
 }

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Filter from './Components/Filter/Filter'
 import Products from './Components/Products/Products'
 import styleCSS from '@/pages/PUBLIC/stylePublic.module.css'
+import Title from './Components/Title/Title'
 
 export default function Home() {
   return (
@@ -12,10 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className={styleCSS.Globaltitle}>
-            <h1>title web e-commerce</h1>
-        </div>
+        <Title></Title>
        <Filter></Filter>
 
        <div className={styleCSS.products}>
@@ -30,7 +28,6 @@ export default function Home() {
         
        
 
-      </main>
     </>
   )
 }

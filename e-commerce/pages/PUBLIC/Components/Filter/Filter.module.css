@@ -1,6 +1,6 @@
 
 .filter{
-    width: 100%;
+    /* width: 100vw; */
     height: 100%;
     background-color: rgb(158, 231, 232);
     display: flex;
@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     gap: 1%;
-    min-width: 603px;
+    /* min-width: 603px; */
 }
 
 
