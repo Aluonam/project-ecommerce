@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Filter from './Components/Filter/Filter'
 import Products from './Components/Products/Products'
 import styleCSS from '@/pages/PUBLIC/stylePublic.module.css'
+<<<<<<< HEAD
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
+=======
+import Title from './Components/Title/Title'
+>>>>>>> master
 
 export default function Home() {
 
@@ -38,10 +42,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <div className={styleCSS.Globaltitle}>
-            <h1>title web e-commerce</h1>
-        </div>
+        <Title></Title>
        <Filter></Filter>
 
        <div className={styleCSS.products}>
@@ -52,7 +53,6 @@ export default function Home() {
         
        
 
-      </main>
     </>
   )
 }
