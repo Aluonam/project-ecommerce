@@ -2,12 +2,9 @@ import Head from 'next/head'
 import Filter from './Components/Filter/Filter'
 import Products from './Components/Products/Products'
 import styleCSS from '@/pages/PUBLIC/stylePublic.module.css'
-<<<<<<< HEAD
-import axios from 'axios';
-import React, {useState, useEffect} from 'react';
-=======
 import Title from './Components/Title/Title'
->>>>>>> master
+import axios from 'axios';
+import React, {useState, useEffect} from 'react'
 
 export default function Home() {
 
