@@ -1,16 +1,19 @@
 import React from 'react'
 import styleCSS from '@/pages/PUBLIC/Components/Button/ButtonStyle.module.css'
+import axios from 'axios'
 
-const Button = () => {
+const Button = ({buttonName, categoryId, setData}) => {
+
+  const handleCallProductCategory = () =>{
+    const apiUrl = `http://localhost:3032/v1/fakestoreapi/products/${categoryId}/category`; 
+    axios.get(apiUrl)
+      .then(response => setData(response.data))
+      .catch(error => console.log('Error detected:', error));
+  }
+
   return (
     <>
-    <button onClick={()=>{}} className={styleCSS.button}>Ropa de hombre</button>
-    <button onClick={()=>{}} className={styleCSS.button}>Ropa de mujer</button>
-    <button onClick={()=>{}} className={styleCSS.button}>Precio de menor a mayor</button>
-    <button onClick={()=>{}} className={styleCSS.button}>Precio de mayor a menor</button>
-    <button onClick={()=>{}} className={styleCSS.button}>Joyería</button>
-    <button onClick={()=>{}} className={styleCSS.button}>Electrónica</button>
-    <button onClick={()=>{}} className={styleCSS.button}>Ropa con algodón</button>
+    <button onClick={()=>{handleCallProductCategory()}} className={styleCSS.button}>{buttonName}</button>
     </>
   )
 }
