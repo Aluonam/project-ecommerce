@@ -42,7 +42,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <Title></Title>
-       <Filter></Filter>
+       <Filter setData={setData} data={data}></Filter>
 
        <div className={styleCSS.products}>
           
