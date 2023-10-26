@@ -13,7 +13,7 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const apiUrl = 'https://fakestoreapi.com/products?limit=·'; 
+    const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=20'; 
     axios.get(apiUrl)
       .then(response => setData(response.data))
       .catch(error => console.log('Error detected:', error));
@@ -24,12 +24,14 @@ export default function Home() {
       <>
       <Products 
           productTitle={actualElement.title}
-          productImage={actualElement.image}
+          productImage={actualElement.images[0]}
           productPrice={actualElement.price}
         ></Products>
       </>
     )
   })
+
+  console.log("datosAPI",data)
 
   return (
     <>
