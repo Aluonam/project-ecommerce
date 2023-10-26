@@ -3,7 +3,7 @@ const app = express();
 
 const productsDataAPI = require("../DatosModificados/fakeApiData.json");
 
-// http://localhost:3032/v1/fakestoreapi/products?limit=1
+// http://localhost:3032/v1/fakestoreapi/products?limit=1 //url de BD
 // rootPath (base de la ruta) = http://localhost:3032/v1
 // params = v1/fakestoreapi/products
 // query = ?limit=1  
