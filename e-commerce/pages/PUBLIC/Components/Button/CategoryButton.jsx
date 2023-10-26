@@ -1,8 +1,8 @@
 import React from 'react'
-import styleCSS from '@/pages/PUBLIC/Components/Button/ButtonStyle.module.css'
+import styleCSS from '@/pages/PUBLIC/Components/Button/CategoryButtonStyle.module.css'
 import axios from 'axios'
 
-const Button = ({buttonName, categoryId, setData}) => {
+const CategoryButton = ({buttonName, categoryId, setData}) => {
 
   const handleCallProductCategory = () =>{
     const apiUrl = `http://localhost:3032/v1/fakestoreapi/products/${categoryId}/category`; 
@@ -18,4 +18,4 @@ const Button = ({buttonName, categoryId, setData}) => {
   )
 }
 
-export default Button
+export default CategoryButton

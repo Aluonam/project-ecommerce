@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import styleCSS from '@/pages/PUBLIC/Components/Filter/Filter.module.css'
-import Button from '../Button/Button'
+import buttonStyle from '../Button/CategoryButtonStyle.module.css'
+import CategoryButton from '../Button/CategoryButton'
 import axios from 'axios'
 
-const Filter = ({setData}) => {
+const Filter = ({data, setData}) => {
 
   const [categoriesProducts, setCategoriesProducts] = useState([])
 
@@ -18,14 +19,21 @@ const Filter = ({setData}) => {
 
   const showCategory = categoriesProducts.map((actualElement)=>{
     return(
-        <Button buttonName={actualElement.categoryName} categoryId={actualElement.categoryId} setData={setData}></Button>
+        <CategoryButton buttonName={actualElement.categoryName} categoryId={actualElement.categoryId} setData={setData}></CategoryButton>
     )
   })
 
+  const handlePriceLowest = ()=>{
+    const copyArr = structuredClone(data);
+    const lowestToHigh = copyArr.sort((a,b)=>{return(a.price-b.price)})
+    setData(lowestToHigh)
+  }
+ 
 
   return (
     <div className={styleCSS.filter}>
       {showCategory}
+      <button className={buttonStyle.button} onClick={()=>{handlePriceLowest()}}>más baratos primero</button>
     </div>
   )
 }
