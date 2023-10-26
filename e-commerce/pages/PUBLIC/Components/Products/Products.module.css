@@ -30,6 +30,7 @@
     font-weight: 400px;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
 }
 
 .products_card__imgBox{
