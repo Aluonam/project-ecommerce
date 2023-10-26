@@ -28,12 +28,17 @@ const Filter = ({data, setData}) => {
     const lowestToHigh = copyArr.sort((a,b)=>{return(a.price-b.price)})
     setData(lowestToHigh)
   }
- 
+  const handlePriceHigther = ()=>{
+    const copyArr = structuredClone(data);
+    const highToLowest = copyArr.sort((a,b)=>{return(b.price-a.price)})
+    setData(highToLowest)
+  }
 
   return (
     <div className={styleCSS.filter}>
       {showCategory}
       <button className={buttonStyle.button} onClick={()=>{handlePriceLowest()}}>más baratos primero</button>
+      <button className={buttonStyle.button} onClick={()=>{handlePriceHigther()}}>más caros primero</button>
     </div>
   )
 }
