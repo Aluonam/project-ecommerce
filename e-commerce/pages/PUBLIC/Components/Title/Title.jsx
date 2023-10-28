@@ -5,7 +5,7 @@ import titleStyleCSS from './Title.module.css'
 const Title = () => {
   return (
     <div className={titleStyleCSS.Globaltitle}>
-            <h1>title web e-commerce</h1>
+            <h1>Web e-commerce</h1>
     </div>
   )
 }
