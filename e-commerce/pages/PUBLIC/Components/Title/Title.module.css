@@ -4,6 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
+    background-color: rgb(3, 5, 4);
+    color: aliceblue;
+    text-decoration: bold;
+    font-family: "Segoe UI";
     /* min-width: 603px; */
 }
