@@ -1,7 +1,9 @@
 
 .prueba{
-    width: 10vw;
+    width: 100vw;
     height: 5vh;
-    background-color: blue;
-
+    background-color: rgb(143, 143, 198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
