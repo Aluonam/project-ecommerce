@@ -14,6 +14,18 @@ const ProductTable = () => {
       .catch(error => console.log('Error detected:', error));
   }, []);
 
+  const dataProductTable = data.map((actualProduct)=>{
+    return(
+      <tbody className={styleProductTable.tbodyTable}>
+        <tr className={styleProductTable.trBodyTable}>
+              <td className={styleProductTable.columnId}>{actualProduct.id}</td>
+              <td className={styleProductTable.columnNameProduct}>{actualProduct.title}</td>
+              <td className={styleProductTable.columnCategory}>{actualProduct.category.name}</td>
+              <td className={styleProductTable.columnPrice}>{actualProduct.price}$</td>
+        </tr>
+      </tbody>
+    )
+  })
 
   return (
     <>
@@ -30,16 +42,9 @@ const ProductTable = () => {
             </tr>
           </thead>
 
-          <tbody className={styleProductTable.tbodyTable}>
-            <tr className={styleProductTable.trBodyTable}>
-              <td className={styleProductTable.columnNameProduct}>producto 1</td>
-              <td className={styleProductTable.columnCategory}>categoría 1</td>
-              <td className={styleProductTable.columnPrice}>precio 1</td>
-            </tr>
-          </tbody>
+          {dataProductTable}
 
         </table>
-
       </div>
     </>
 

@@ -49,6 +49,10 @@
     justify-content: space-around;
 }
 
+.columnId{
+    width: 10%;
+    min-width: 100px;
+}
 
 .columnNameProduct {
     text-align: center;
