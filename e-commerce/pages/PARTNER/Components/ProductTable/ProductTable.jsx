@@ -16,14 +16,13 @@ const ProductTable = () => {
 
   const dataProductTable = data.map((actualProduct)=>{
     return(
-      <tbody className={styleProductTable.tbodyTable}>
+      
         <tr className={styleProductTable.trBodyTable}>
               <td className={styleProductTable.columnId}>{actualProduct.id}</td>
               <td className={styleProductTable.columnNameProduct}>{actualProduct.title}</td>
               <td className={styleProductTable.columnCategory}>{actualProduct.category.name}</td>
               <td className={styleProductTable.columnPrice}>{actualProduct.price}$</td>
         </tr>
-      </tbody>
     )
   })
 
@@ -42,9 +41,9 @@ const ProductTable = () => {
               <th className={styleProductTable.columnPrice}>precio</th>
             </tr>
           </thead>
-
-          {dataProductTable}
-
+          <tbody className={styleProductTable.tbodyTable}>
+            {dataProductTable}
+          </tbody>
         </table>
       </div>
     </>

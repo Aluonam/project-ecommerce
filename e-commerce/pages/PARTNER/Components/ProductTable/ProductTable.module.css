@@ -7,7 +7,6 @@
 
 .GlobalProductTable {
     width: 100%;
-    height: 100vh;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -22,31 +21,45 @@
 
 
 .Table {
-    width: 100%;
-    max-width: 800px;
+    width: 80%;
+    /* max-width: 800px; */
     height: 80%;
     display: flex;
     flex-direction: column;
     border: 1px solid #000;
-    /* min-width: 600px; */
+    min-width: 600px;
 }
 
-.theadTable, .trHeadTable {
+.theadTable {
     width: 100%;
     height: 10%;
     background-color: #000;
     color: rgb(228, 225, 225);
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    min-height: 60px;
 }
 
-.tbodyTable, .trBodyTable {
+.trHeadTable{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.trBodyTable {
     width: 100%;
     height: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.tbodyTable{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* overflow: scroll; */
 }
 
 .columnId{
