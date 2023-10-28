@@ -5,14 +5,14 @@ import axios from 'axios';
 
 const ProductTable = () => {
 
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=20'; 
-  //   axios.get(apiUrl)
-  //     .then(response => setData(response.data))
-  //     .catch(error => console.log('Error detected:', error));
-  // }, []);
+  useEffect(() => {
+    const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=20'; 
+    axios.get(apiUrl)
+      .then(response => setData(response.data))
+      .catch(error => console.log('Error detected:', error));
+  }, []);
 
 
   return (
