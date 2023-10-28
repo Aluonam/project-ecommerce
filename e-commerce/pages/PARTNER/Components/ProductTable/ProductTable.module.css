@@ -31,28 +31,27 @@
     /* min-width: 600px; */
 }
 
-.theadTable {
+.theadTable, .trHeadTable {
     width: 100%;
     height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background-color: #000;
     color: rgb(228, 225, 225);
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.tbodyTable {
+.tbodyTable, .trBodyTable {
     width: 100%;
     height: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 
 .columnNameProduct {
     text-align: center;
-    border: 1px solid black;
     width: 30%;
     min-width: 100px;
 }
@@ -60,11 +59,9 @@
 .columnCategory{
     width: 30%;
     min-width: 100px;
-    border: 1px solid black;
 }
 
 .columnPrice{
     width: 30%;
     min-width: 100px;
-    border: 1px solid black;
 }
