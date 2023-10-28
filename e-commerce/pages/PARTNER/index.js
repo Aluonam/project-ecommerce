@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import ProductTable from './Components/ProductTable/ProductTable'
+import StylePartner from './stylePartner.module.css'
 
 export default function Home() {
   return (
@@ -10,7 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-       <h1>Hola</h1>
+       <div className={StylePartner.titlePartner}>Productos del proveedor</div>
+       <ProductTable></ProductTable>
       </main>
     </>
   )
