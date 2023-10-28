@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import ProductTable from './Components/ProductTable/ProductTable'
 import StylePartner from './stylePartner.module.css'
+import Pagination from './Components/Pagination/Pagination'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
        <div className={StylePartner.titlePartner}>Productos del proveedor</div>
        <ProductTable></ProductTable>
+       <Pagination></Pagination>
       </main>
     </>
   )
