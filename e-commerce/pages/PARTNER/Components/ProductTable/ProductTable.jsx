@@ -36,6 +36,7 @@ const ProductTable = () => {
 
           <thead className={styleProductTable.theadTable}>
             <tr className={styleProductTable.trHeadTable}>
+              <th className={styleProductTable.columnId}>Id</th>
               <th className={styleProductTable.columnNameProduct}>nombre del producto</th>
               <th className={styleProductTable.columnCategory}>categoría</th>
               <th className={styleProductTable.columnPrice}>precio</th>
