@@ -8,11 +8,11 @@ import React, {useState, useEffect} from 'react';
 export default function Home() {
 
   const [data, setData] = useState([]);
-
   const [paginationData, setPaginationData] = useState([])
+  const [urlEndData, seturlEndData] = useState("/fakestoreapi/products?limit=10&pagination=1")
 
   useEffect(() => {
-    const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=10&pagination=1'; 
+    const apiUrl = `http://localhost:3032/v1${urlEndData}`; 
     axios.get(apiUrl)
       .then(response => {
                           setData(response.data.apiData.productsData)
@@ -22,7 +22,9 @@ export default function Home() {
                           })
                         })
       .catch(error => console.log('Error detected:', error));
-  }, []);
+  }, [urlEndData]);
+
+
 
 
   return (
@@ -36,7 +38,7 @@ export default function Home() {
       <main>
        <div className={StylePartner.titlePartner}>Productos del proveedor</div>
        <ProductTable data={data} ></ProductTable>
-       <Pagination paginationData={paginationData} setData={setData} setPaginationData={setPaginationData}></Pagination>
+       <Pagination paginationData={paginationData} seturlEndData={seturlEndData}></Pagination>
       </main>
     </>
   )

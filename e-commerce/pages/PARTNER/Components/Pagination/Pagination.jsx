@@ -2,18 +2,12 @@ import React from 'react'
 import stylePagination from './Pagination.module.css'
 import axios from 'axios'
 
-const Pagination = ({paginationData, setData, setPaginationData}) => {
+const Pagination = ({paginationData, seturlEndData}) => {
+  
 
-  console.log(paginationData, "paginacionnnnn")
   
   const handlePage = (endURL)=>{
-    const apiUrl = `http://localhost:3032/v1${endURL}`
-    axios.get(apiUrl)
-    .then(response => { setData(response.data.apiData.productsData)
-                        setPaginationData({
-                          pageData : response.data.apiData.paginationData,
-                          linksPagination : response.data.links,
-                        } )})
+    seturlEndData(endURL)
   }
 
   return (
