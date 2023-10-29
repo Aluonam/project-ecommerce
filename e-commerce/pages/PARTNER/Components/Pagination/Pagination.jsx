@@ -1,9 +1,10 @@
 import React from 'react'
 import stylePagination from './Pagination.module.css'
-import axios from 'axios'
 
 const Pagination = ({paginationData, seturlEndData}) => {
   
+  const loadPrev = paginationData.linksPagination?.prevPage
+  const loadNext = paginationData.linksPagination?.nextPage
 
   
   const handlePage = (endURL)=>{
@@ -13,9 +14,9 @@ const Pagination = ({paginationData, seturlEndData}) => {
   return (
     <div className={stylePagination.prueba}>
       {/* programación defensiva no mostrará el botón si recibe false al comprobar prevPage */}
-     {paginationData.linksPagination?.prevPage && <button className={stylePagination.buttonPagination} onClick={()=>handlePage(paginationData.linksPagination.prevPage)}>pag ant</button>} 
+      {loadPrev && <button className={stylePagination.buttonPagination} onClick={()=>handlePage(paginationData.linksPagination.prevPage)}>pag ant</button>} 
       <div> {paginationData.pageData?.actualPage} de {paginationData.pageData?.totalPages} </div>
-      {paginationData.linksPagination?.nextPage && <button className={stylePagination.buttonPagination} onClick={()=>{handlePage(paginationData.linksPagination?.nextPage)}}>pag sig</button>}
+      {loadNext && <button className={stylePagination.buttonPagination} onClick={()=>{handlePage(paginationData.linksPagination?.nextPage)}}>pag sig</button>}
     </div>
   )
 }
