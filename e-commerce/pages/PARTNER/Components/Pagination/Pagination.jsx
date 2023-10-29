@@ -4,9 +4,9 @@ import stylePagination from './Pagination.module.css'
 const Pagination = () => {
   return (
     <div className={stylePagination.prueba}>
-      <button>pag anterior</button>
+      <button className={stylePagination.buttonPagination}>pag ant</button>
       <div>pag actual</div>
-      <button>pag siguiente</button>
+      <button className={stylePagination.buttonPagination}>pag sig</button>
     </div>
   )
 }
