@@ -36,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-       <div className={StylePartner.titlePartner}>Productos del proveedor</div>
+       <div className={StylePartner.titlePartner}><h1>Productos del proveedor</h1></div>
        <ProductTable data={data} ></ProductTable>
        <Pagination paginationData={paginationData} seturlEndData={seturlEndData}></Pagination>
       </main>

@@ -1,5 +1,6 @@
 .bodyContainer {
     height: 85vh;
+    overflow: scroll;
 }
 
 

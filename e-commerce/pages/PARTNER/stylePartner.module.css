@@ -1,9 +1,10 @@
 
 .titlePartner{
-    background-color: rgb(2, 7, 5);
+    background-color: rgb(3, 5, 4);
     color: aliceblue;
-    font-size: large;
-    height: 60px;
+    text-decoration: bold;
+    font-family: "Segoe UI";
+    height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: center;
