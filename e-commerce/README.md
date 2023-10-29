@@ -1,40 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**PROYECTO E-COMMERCE**
 
-## Getting Started
 
-First, run the development server:
+http://localhost:3000/PUBLIC
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+http://localhost:3000/PARTNER
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Versión prueba ténica: 
+"Desde el departamento de IT nos hemos lanzado al sector e-commerce y
+queremos tener listo cuanto antes un MVP para mostrar los productos que vendemos,
+antes de integrar la funcionalidad de pagos.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Necesitamos 2 aplicaciones, una con un diseño muy simple en la que se muestren
+nuestro catálogo de productos, puesto que será usada por nuestro proveedor y otra algo
+más visual a la que tendrán acceso el resto de clientes. Para dar solución a esta necesidad
+se nos ha ocurrido crear un Monorepo para compartir la lógica entre ambos proyectos.
+El equipo de back ya nos ha preparado una API para hacer pruebas (alojada en
+https://fakestoreapi.com/) con los endpoints necesarios.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+*Consumo API con base de datos falsa creada para este fin y disponible en la carpeta del proyecto: FakStoreAPI*
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Lo mínimo que se nos ha pedido para esta versión es que en la app para el PARTNER con
+‘pintemos’ una tabla mostrando los productos, en concreto los siguientes campos:
+• Title
+• Category
+• Price
+Hay que proporcionar paginación.
+Y para la aplicación pública que listemos los productos como en esta APP, añadiendo
+ordenación y filtrado por categorías."
