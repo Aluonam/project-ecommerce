@@ -7,10 +7,18 @@ const ProductTable = () => {
 
   const [data, setData] = useState([]);
 
+  const [paginationData, setPaginationData] = useState([])
+
   useEffect(() => {
-    const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=20'; 
+    const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=10&pagination=1'; 
     axios.get(apiUrl)
-      .then(response => setData(response.data))
+      .then(response => {
+                          setData(response.data.apiData.productsData)
+                          setPaginationData({
+                            paginationData : response.data.apiData.paginationData,
+                            linksPagination : response.data.links,
+                          })
+                        })
       .catch(error => console.log('Error detected:', error));
   }, []);
 
