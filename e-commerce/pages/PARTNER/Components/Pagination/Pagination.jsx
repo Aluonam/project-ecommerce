@@ -1,11 +1,15 @@
 import React from 'react'
 import stylePagination from './Pagination.module.css'
 
-const Pagination = () => {
+const Pagination = ({paginationData}) => {
+
+  console.log(paginationData, "paginacionnnnn")
+
+
   return (
     <div className={stylePagination.prueba}>
       <button className={stylePagination.buttonPagination}>pag ant</button>
-      <div>pag actual</div>
+      <div> {paginationData.pageData.actualPage} de {paginationData.pageData.totalPages} </div>
       <button className={stylePagination.buttonPagination}>pag sig</button>
     </div>
   )

@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styleProductTable from './ProductTable.module.css'
-import axios from 'axios';
 
 
-const ProductTable = () => {
 
-  const [data, setData] = useState([]);
+const ProductTable = ({data}) => {
 
-  const [paginationData, setPaginationData] = useState([])
-
-  useEffect(() => {
-    const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=10&pagination=1'; 
-    axios.get(apiUrl)
-      .then(response => {
-                          setData(response.data.apiData.productsData)
-                          setPaginationData({
-                            paginationData : response.data.apiData.paginationData,
-                            linksPagination : response.data.links,
-                          })
-                        })
-      .catch(error => console.log('Error detected:', error));
-  }, []);
-
+ 
   const dataProductTable = data.map((actualProduct)=>{
     return(
       
