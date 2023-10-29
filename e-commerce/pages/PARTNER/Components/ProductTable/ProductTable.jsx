@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styleProductTable from './ProductTable.module.css'
-import axios from 'axios';
 
 
-const ProductTable = () => {
 
-  const [data, setData] = useState([]);
+const ProductTable = ({data}) => {
 
-  useEffect(() => {
-    const apiUrl = 'http://localhost:3032/v1/fakestoreapi/products?limit=20'; 
-    axios.get(apiUrl)
-      .then(response => setData(response.data))
-      .catch(error => console.log('Error detected:', error));
-  }, []);
-
+ 
   const dataProductTable = data.map((actualProduct)=>{
     return(
       
@@ -28,6 +20,7 @@ const ProductTable = () => {
 
   return (
     <>
+    <div className={styleProductTable.bodyContainer}>
       <div className={styleProductTable.titleOfTheTable}>ProductTable</div>
       <div className={styleProductTable.GlobalProductTable}>
 
@@ -45,6 +38,7 @@ const ProductTable = () => {
             {dataProductTable}
           </tbody>
         </table>
+      </div>
       </div>
     </>
 
