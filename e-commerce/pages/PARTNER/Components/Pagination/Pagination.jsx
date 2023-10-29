@@ -1,23 +1,27 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import stylePagination from './Pagination.module.css'
+import axios from 'axios'
 
-const Pagination = ({paginationData}) => {
+const Pagination = ({paginationData, setData, setPaginationData}) => {
 
   console.log(paginationData, "paginacionnnnn")
   
   const handlePage = (endURL)=>{
     const apiUrl = `http://localhost:3032/v1${endURL}`
     axios.get(apiUrl)
-    .then(response => {
-                      })
+    .then(response => { setData(response.data.apiData.productsData)
+                        setPaginationData({
+                          pageData : response.data.apiData.paginationData,
+                          linksPagination : response.data.links,
+                        } )})
   }
 
   return (
     <div className={stylePagination.prueba}>
       {/* programación defensiva no mostrará el botón si recibe false al comprobar prevPage */}
-     {paginationData.links?.prevPage && <button className={stylePagination.buttonPagination} onClick={()=>handlePage(paginationData.links.prevPage)}>pag ant</button>} 
+     {paginationData.linksPagination?.prevPage && <button className={stylePagination.buttonPagination} onClick={()=>handlePage(paginationData.linksPagination.prevPage)}>pag ant</button>} 
       <div> {paginationData.pageData?.actualPage} de {paginationData.pageData?.totalPages} </div>
-      <button className={stylePagination.buttonPagination}>pag sig</button>
+      {paginationData.linksPagination?.nextPage && <button className={stylePagination.buttonPagination} onClick={()=>{handlePage(paginationData.linksPagination?.nextPage)}}>pag sig</button>}
     </div>
   )
 }

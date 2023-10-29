@@ -36,7 +36,7 @@ export default function Home() {
       <main>
        <div className={StylePartner.titlePartner}>Productos del proveedor</div>
        <ProductTable data={data} ></ProductTable>
-       <Pagination paginationData={paginationData}></Pagination>
+       <Pagination paginationData={paginationData} setData={setData} setPaginationData={setPaginationData}></Pagination>
       </main>
     </>
   )
