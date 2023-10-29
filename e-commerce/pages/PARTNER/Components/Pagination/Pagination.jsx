@@ -14,9 +14,9 @@ const Pagination = ({paginationData, seturlEndData}) => {
   return (
     <div className={stylePagination.prueba}>
       {/* programación defensiva no mostrará el botón si recibe false al comprobar prevPage */}
-      {loadPrev && <button className={stylePagination.buttonPagination} onClick={()=>handlePage(paginationData.linksPagination.prevPage)}>pag ant</button>} 
+      {loadPrev && <button className={stylePagination.buttonPagination} onClick={()=>handlePage(paginationData.linksPagination.prevPage)}>{"<"}</button>} 
       <div> {paginationData.pageData?.actualPage} de {paginationData.pageData?.totalPages} </div>
-      {loadNext && <button className={stylePagination.buttonPagination} onClick={()=>{handlePage(paginationData.linksPagination?.nextPage)}}>pag sig</button>}
+      {loadNext && <button className={stylePagination.buttonPagination} onClick={()=>{handlePage(paginationData.linksPagination?.nextPage)}}>{">"}</button>}
     </div>
   )
 }

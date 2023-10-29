@@ -20,6 +20,7 @@ const ProductTable = ({data}) => {
 
   return (
     <>
+    <div className={styleProductTable.bodyContainer}>
       <div className={styleProductTable.titleOfTheTable}>ProductTable</div>
       <div className={styleProductTable.GlobalProductTable}>
 
@@ -37,6 +38,7 @@ const ProductTable = ({data}) => {
             {dataProductTable}
           </tbody>
         </table>
+      </div>
       </div>
     </>
 

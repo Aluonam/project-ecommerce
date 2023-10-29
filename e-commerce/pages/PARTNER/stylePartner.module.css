@@ -1,7 +1,9 @@
 
 .titlePartner{
-    background-color: rgb(40, 136, 104);
-    height: 15vh;
+    background-color: rgb(2, 7, 5);
+    color: aliceblue;
+    font-size: large;
+    height: 60px;
     width: 100vw;
     display: flex;
     justify-content: center;

@@ -6,10 +6,10 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 
 export default function Home() {
-
+  const totalProductsPerPage = 15
   const [data, setData] = useState([]);
   const [paginationData, setPaginationData] = useState([])
-  const [urlEndData, seturlEndData] = useState("/fakestoreapi/products?limit=10&pagination=1")
+  const [urlEndData, seturlEndData] = useState(`/fakestoreapi/products?limit=${totalProductsPerPage}&pagination=1`)
 
   useEffect(() => {
     const apiUrl = `http://localhost:3032/v1${urlEndData}`; 
