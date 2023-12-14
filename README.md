@@ -1,29 +1,26 @@
-**PROYECTO E-COMMERCE**
-
+##PROYECTO E-COMMERCE
 
 http://localhost:3000/PUBLIC
 
+###Aplicación para Clientes:
+
+Diseño visualmente atractivo y simple para el acceso de los clientes.
+Ofrecerá una lista de productos con capacidades de ordenación y filtrado por categorías.
+*Consumo API con base de datos falsa creada para este fin y disponible en la carpeta del proyecto: FakeStoreAPI*
+
 http://localhost:3000/PARTNER
 
-Versión prueba ténica: 
-"Desde el departamento de IT nos hemos lanzado al sector e-commerce y
-queremos tener listo cuanto antes un MVP para mostrar los productos que vendemos,
-antes de integrar la funcionalidad de pagos.
+###Aplicación para el Proveedor:
 
-Necesitamos 2 aplicaciones, una con un diseño muy simple en la que se muestren
-nuestro catálogo de productos, puesto que será usada por nuestro proveedor y otra algo
-más visual a la que tendrán acceso el resto de clientes. Para dar solución a esta necesidad
-se nos ha ocurrido crear un Monorepo para compartir la lógica entre ambos proyectos.
-El equipo de back ya nos ha preparado una API para hacer pruebas (alojada en
-https://fakestoreapi.com/) con los endpoints necesarios.
+La aplicación destinada al proveedor mostrará una tabla con productos y paginación
+Diseño sencillo para mostrar el catálogo de productos.
+Utilizada principalmente por el proveedor.
 
-*Consumo API con base de datos falsa creada para este fin y disponible en la carpeta del proyecto: FakStoreAPI*
 
-Lo mínimo que se nos ha pedido para esta versión es que en la app para el PARTNER con
-‘pintemos’ una tabla mostrando los productos, en concreto los siguientes campos:
-• Title
-• Category
-• Price
-Hay que proporcionar paginación.
-Y para la aplicación pública que listemos los productos como en esta APP, añadiendo
-ordenación y filtrado por categorías."
+###Herramientas Utilizadas:
+El proyecto ha sido construido utilizando:
+
+- HTML5: Para la estructura principal del proyecto.
+- CSS: Para estilos que proporcionan una presentación atractiva y amigable.
+- JavaScript: Para funcionalidades interactivas y dinámicas.
+- React: Para construir interfaces de usuario modernas y eficientes.
