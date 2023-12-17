@@ -1,8 +1,8 @@
-##PROYECTO E-COMMERCE
+## PROYECTO E-COMMERCE
 
 http://localhost:3000/PUBLIC
 
-###Aplicación para Clientes:
+### Aplicación para Clientes:
 
 Diseño visualmente atractivo y simple para el acceso de los clientes.
 Ofrecerá una lista de productos con capacidades de ordenación y filtrado por categorías.
@@ -10,14 +10,14 @@ Ofrecerá una lista de productos con capacidades de ordenación y filtrado por c
 
 http://localhost:3000/PARTNER
 
-###Aplicación para el Proveedor:
+### Aplicación para el Proveedor:
 
 La aplicación destinada al proveedor mostrará una tabla con productos y paginación
 Diseño sencillo para mostrar el catálogo de productos.
 Utilizada principalmente por el proveedor.
 
 
-###Herramientas Utilizadas:
+### Herramientas Utilizadas:
 El proyecto ha sido construido utilizando:
 
 - HTML5: Para la estructura principal del proyecto.
