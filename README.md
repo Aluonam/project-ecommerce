@@ -10,10 +10,10 @@ Diseño visualmente atractivo y simple para el acceso de los clientes.
 Ofrecerá una lista de productos con capacidades de ordenación y filtrado por categorías.
 *Consumo API con base de datos falsa creada para este fin y disponible en la carpeta del proyecto: FakeStoreAPI*
 
-http://localhost:3000/PARTNER
-
 
 ![PARTNER](image-1.png)
+
+http://localhost:3000/PARTNER
 
 ### Aplicación para el Proveedor:
 
