@@ -37,8 +37,8 @@ const Filter = ({data, setData}) => {
   return (
     <div className={styleCSS.filter}>
       {showCategory}
-      <button className={buttonStyle.button} onClick={()=>{handlePriceLowest()}}>más baratos primero</button>
-      <button className={buttonStyle.button} onClick={()=>{handlePriceHigther()}}>más caros primero</button>
+      <button className={buttonStyle.button} onClick={()=>{handlePriceLowest()}}>Más baratos primero</button>
+      <button className={buttonStyle.button} onClick={()=>{handlePriceHigther()}}>Más caros primero</button>
     </div>
   )
 }
